@@ -9,14 +9,14 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox fx:controller="pl.ml.fxControllers.LogScreenController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="159.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.ml.fxControllers.LogScreenController">
     <children>
         <Label alignment="TOP_CENTER" prefHeight="35.0" prefWidth="335.0" text="TODOapp" textAlignment="CENTER" textFill="#239923" textOverrun="CLIP">
             <font>
                 <Font name="System Bold Italic" size="24.0" />
             </font>
         </Label>
-        <GridPane prefHeight="189.0" prefWidth="301.0">
+        <GridPane prefHeight="114.0" prefWidth="335.0">
             <columnConstraints>
                 <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="163.0" minWidth="10.0" prefWidth="79.0" />
                 <ColumnConstraints fillWidth="false" halignment="LEFT" hgrow="SOMETIMES" maxWidth="244.0" minWidth="10.0" prefWidth="256.0" />
@@ -32,8 +32,8 @@
                 <Label text="Password:" GridPane.rowIndex="1" />
                 <TextField fx:id="userNameField" prefHeight="25.0" prefWidth="200.0" GridPane.columnIndex="1" />
                 <TextField fx:id="passwordField" prefHeight="25.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                <Button onMouseClicked="#setLogInButton" fx:id="logInButton" mnemonicParsing="false" text="log in" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                <Button onMouseClicked="#setRegistryButton" fx:id="registerButton" mnemonicParsing="false" text="register" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                <Button fx:id="logInButton" mnemonicParsing="false" onMouseClicked="#setLogInButton" text="log in" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <Button fx:id="registerButton" mnemonicParsing="false" onMouseClicked="#setRegistryButton" text="register" GridPane.columnIndex="1" GridPane.rowIndex="3" />
             </children>
         </GridPane>
     </children>

@@ -51,7 +51,7 @@ public class Main extends Application {
         fxmlLoader.load();
 
         Parent root = fxmlLoader.getRoot();
-        primaryStage.setScene(new Scene(root,650,350));
+        primaryStage.setScene(new Scene(root));
         primaryStage.show();
     }
 }

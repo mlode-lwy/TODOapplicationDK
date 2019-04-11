@@ -65,7 +65,7 @@ public class LogScreenController implements Initializable {
 
         Parent root = fxmlLoader.getRoot();
 
-        registryStage.setScene(new Scene(root,650,350));
+        registryStage.setScene(new Scene(root));
         registryStage.show();
     }
 }

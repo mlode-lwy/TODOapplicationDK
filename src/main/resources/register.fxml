@@ -10,17 +10,17 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox fx:controller="pl.ml.fxControllers.RegisterController" prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<VBox prefHeight="211.0" prefWidth="414.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.ml.fxControllers.RegisterController">
     <children>
         <Label alignment="TOP_CENTER" prefHeight="17.0" prefWidth="640.0" text="REJESTRACJA">
             <font>
                 <Font size="24.0" />
             </font>
         </Label>
-        <GridPane prefHeight="120.0" prefWidth="586.0">
+        <GridPane prefHeight="120.0" prefWidth="506.0">
             <columnConstraints>
-                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="314.0" minWidth="10.0" prefWidth="85.0" />
-                <ColumnConstraints fillWidth="false" halignment="CENTER" maxWidth="530.0" minWidth="10.0" prefWidth="530.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="314.0" minWidth="10.0" prefWidth="81.0" />
+                <ColumnConstraints fillWidth="false" halignment="CENTER" maxWidth="530.0" minWidth="10.0" prefWidth="333.0" />
             </columnConstraints>
             <rowConstraints>
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -33,16 +33,16 @@
                 <Label text="Lastname" GridPane.rowIndex="1" />
                 <Label text="Username" GridPane.rowIndex="2" />
                 <Label text="Password" GridPane.rowIndex="3" />
-                <TextField fx:id="firstNameField" prefHeight="200.0" prefWidth="450.0" GridPane.columnIndex="1" />
-                <TextField fx:id="lastNameField" prefHeight="25.0" prefWidth="450.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                <TextField fx:id="userNameField" prefWidth="450.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                <TextField fx:id="passwordField" prefWidth="450.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                <TextField fx:id="firstNameField" prefHeight="30.0" prefWidth="300.0" GridPane.columnIndex="1" />
+                <TextField fx:id="lastNameField" prefHeight="25.0" prefWidth="300.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <TextField fx:id="userNameField" prefWidth="300.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <TextField fx:id="passwordField" prefWidth="300.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
             </children>
         </GridPane>
         <ButtonBar maxWidth="-Infinity" prefHeight="52.0" prefWidth="405.0" VBox.vgrow="NEVER">
             <buttons>
-                <Button onMouseClicked="#setApplyButton" fx:id="applyButton" mnemonicParsing="false" text="apply" />
-                <Button onMouseClicked="#setCancelButton" fx:id="cancelButton" mnemonicParsing="false" text="cancel" />
+                <Button fx:id="applyButton" mnemonicParsing="false" onMouseClicked="#setApplyButton" text="apply" />
+                <Button fx:id="cancelButton" mnemonicParsing="false" onMouseClicked="#setCancelButton" text="cancel" />
             </buttons>
         </ButtonBar>
     </children>
