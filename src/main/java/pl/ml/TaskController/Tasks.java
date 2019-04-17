@@ -1,5 +1,7 @@
 package pl.ml.TaskController;
 
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -16,7 +18,7 @@ import javax.persistence.*;
 public class Tasks {
 
     @Id
-    @Column
+    @Column (name = "taskId")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int task_id;
 
@@ -29,6 +31,7 @@ public class Tasks {
     @Column(name = "DUE_DATE")
     private String dueDate;
 
+    @Enumerated (EnumType.STRING)
     @Column(name = "STATUS")
     private TaskStatus status;
 

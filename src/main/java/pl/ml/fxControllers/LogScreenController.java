@@ -43,7 +43,8 @@ public class LogScreenController implements Initializable {
 
     }
 
-    public void setLogInButton() {
+
+    public void setLogInButton() throws IOException {
         Users user = UserController.LogIn(userNameField.getText(),passwordField.getText());
         if (user==null){
             Alert alert = new Alert(Alert.AlertType.ERROR);
@@ -52,8 +53,21 @@ public class LogScreenController implements Initializable {
             alert.show();
         }
         else {
-            userNameField.setText("brawo!");
-            //TODO
+            Stage taskStage = new Stage();
+            FXMLLoader fxmlLoader = new FXMLLoader();
+            fxmlLoader.setLocation(getClass().getResource("/tasks.fxml"));
+            fxmlLoader.load();
+
+            TasksSceneController tasksSceneController = fxmlLoader.getController();
+            tasksSceneController.setUser(user);
+            Parent root = fxmlLoader.getRoot();
+
+            Stage stage = (Stage) logInButton.getScene().getWindow();
+            stage.close();
+
+            taskStage.setScene(new Scene(root));
+            taskStage.show();
+            tasksSceneController.loadTask();
         }
     }
 
